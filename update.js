@@ -12,8 +12,8 @@ const singerSchema = new mongoose.Schema({
 
 const Singer = mongoose.model('Singer', singerSchema);
 
-Singer.find({})
-.then(singers => console.log(singers));
+// Singer.find({})
+// .then(singers => console.log(singers));
 
 // 1. update tat ca
 
@@ -28,4 +28,7 @@ Singer.find({})
 // 3. update theo id
 
 // Singer.findOneAndUpdate({ _id: '5b05675edf054d235a06005a' }, { __v: 4000 })
+// .then(x => console.log(x));
+
+// Singer.findByIdAndUpdate('5b05675edf054d235a06005a', { __v: 4000 })
 // .then(x => console.log(x));

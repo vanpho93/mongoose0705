@@ -12,12 +12,18 @@ const singerSchema = new mongoose.Schema({
 
 const Singer = mongoose.model('Singer', singerSchema);
 
-// Singer.find({})
-// .then(singers => console.log(singers));
+Singer.find({})
+.then(singers => console.log(singers));
 
-// Singer.findOne({ name: 'Teo1' })
-// .then(singer => console.log(singer));
-
-// Singer.findById('5b05675edf054d235a06005a')
+// 1. Xoa nhieu docs co dieu kien
+// Singer.deleteMany({})
+// .then(x => console.log(x))
+// .catch(error => console.log(error));
+// 2. Xoa nhieu 1 doc co dieu kien
+// Singer.findOneAndRemove({ name: 'Karik 123' })
+// .then(singer => console.log(singer))
+// .catch(error => console.log(error));
+// 3. Xoa nhieu 1 doc theo id
+// Singer.findByIdAndRemove('5b056608dc75ff23112422f9')
 // .then(singer => console.log(singer))
 // .catch(error => console.log(error));
